@@ -31,6 +31,7 @@ namespace Kursovaya
         {
             this.bt_create = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bt_choose = new System.Windows.Forms.Button();
             this.bt_refresh = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@ namespace Kursovaya
             // 
             // bt_create
             // 
-            this.bt_create.Location = new System.Drawing.Point(177, 57);
+            this.bt_create.Location = new System.Drawing.Point(162, 57);
             this.bt_create.Name = "bt_create";
             this.bt_create.Size = new System.Drawing.Size(100, 44);
             this.bt_create.TabIndex = 0;
@@ -51,13 +52,20 @@ namespace Kursovaya
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.name});
             this.dataGridView1.Location = new System.Drawing.Point(12, 7);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(159, 381);
+            this.dataGridView1.Size = new System.Drawing.Size(144, 381);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
             // 
             // name
             // 
@@ -67,7 +75,7 @@ namespace Kursovaya
             // 
             // bt_choose
             // 
-            this.bt_choose.Location = new System.Drawing.Point(177, 7);
+            this.bt_choose.Location = new System.Drawing.Point(162, 7);
             this.bt_choose.Name = "bt_choose";
             this.bt_choose.Size = new System.Drawing.Size(100, 44);
             this.bt_choose.TabIndex = 5;
@@ -77,7 +85,7 @@ namespace Kursovaya
             // 
             // bt_refresh
             // 
-            this.bt_refresh.Location = new System.Drawing.Point(177, 107);
+            this.bt_refresh.Location = new System.Drawing.Point(162, 107);
             this.bt_refresh.Name = "bt_refresh";
             this.bt_refresh.Size = new System.Drawing.Size(72, 44);
             this.bt_refresh.TabIndex = 6;
@@ -89,7 +97,7 @@ namespace Kursovaya
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(309, 411);
             this.Controls.Add(this.bt_refresh);
             this.Controls.Add(this.bt_choose);
             this.Controls.Add(this.dataGridView1);
@@ -107,9 +115,10 @@ namespace Kursovaya
 
         private System.Windows.Forms.Button bt_create;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.Button bt_choose;
         private System.Windows.Forms.Button bt_refresh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
     }
 }
 

@@ -1,7 +1,7 @@
 ﻿
 namespace Kursovaya
 {
-    partial class Form3
+    partial class Form4
     {
         /// <summary>
         /// Required designer variable.
@@ -29,40 +29,41 @@ namespace Kursovaya
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv_parts = new System.Windows.Forms.DataGridView();
+            this.dgv_orders = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parts_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.car = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bt_order = new System.Windows.Forms.Button();
-            this.bt_refresh = new System.Windows.Forms.Button();
-            this.bt_orders = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_parts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_orders)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv_parts
+            // dgv_orders
             // 
-            this.dgv_parts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_parts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_orders.AllowUserToAddRows = false;
+            this.dgv_orders.AllowUserToDeleteRows = false;
+            this.dgv_orders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_orders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.name,
             this.parts_type,
             this.car,
             this.amount,
             this.price});
-            this.dgv_parts.Location = new System.Drawing.Point(12, 12);
-            this.dgv_parts.Name = "dgv_parts";
-            this.dgv_parts.RowTemplate.Height = 25;
-            this.dgv_parts.Size = new System.Drawing.Size(776, 351);
-            this.dgv_parts.TabIndex = 0;
+            this.dgv_orders.Location = new System.Drawing.Point(12, 12);
+            this.dgv_orders.Name = "dgv_orders";
+            this.dgv_orders.ReadOnly = true;
+            this.dgv_orders.RowTemplate.Height = 25;
+            this.dgv_orders.Size = new System.Drawing.Size(569, 351);
+            this.dgv_orders.TabIndex = 1;
             // 
             // id
             // 
             this.id.HeaderText = "Art.";
             this.id.Name = "id";
             this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // name
             // 
@@ -94,64 +95,28 @@ namespace Kursovaya
             this.price.Name = "price";
             this.price.ReadOnly = true;
             // 
-            // bt_order
-            // 
-            this.bt_order.Location = new System.Drawing.Point(12, 369);
-            this.bt_order.Name = "bt_order";
-            this.bt_order.Size = new System.Drawing.Size(100, 44);
-            this.bt_order.TabIndex = 2;
-            this.bt_order.Text = "Сделать заказ";
-            this.bt_order.UseVisualStyleBackColor = true;
-            this.bt_order.Click += new System.EventHandler(this.bt_order_Click);
-            // 
-            // bt_refresh
-            // 
-            this.bt_refresh.Location = new System.Drawing.Point(718, 369);
-            this.bt_refresh.Name = "bt_refresh";
-            this.bt_refresh.Size = new System.Drawing.Size(70, 44);
-            this.bt_refresh.TabIndex = 3;
-            this.bt_refresh.Text = "Обновить";
-            this.bt_refresh.UseVisualStyleBackColor = true;
-            this.bt_refresh.Click += new System.EventHandler(this.bt_refresh_Click);
-            // 
-            // bt_orders
-            // 
-            this.bt_orders.Location = new System.Drawing.Point(622, 369);
-            this.bt_orders.Name = "bt_orders";
-            this.bt_orders.Size = new System.Drawing.Size(90, 69);
-            this.bt_orders.TabIndex = 4;
-            this.bt_orders.Text = "Все заказы";
-            this.bt_orders.UseVisualStyleBackColor = true;
-            this.bt_orders.Click += new System.EventHandler(this.bt_orders_Click);
-            // 
-            // Form3
+            // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.bt_orders);
-            this.Controls.Add(this.bt_refresh);
-            this.Controls.Add(this.bt_order);
-            this.Controls.Add(this.dgv_parts);
-            this.Name = "Form3";
-            this.Text = "Form3";
-            this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_parts)).EndInit();
+            this.ClientSize = new System.Drawing.Size(590, 380);
+            this.Controls.Add(this.dgv_orders);
+            this.Name = "Form4";
+            this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_orders)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgv_parts;
+        private System.Windows.Forms.DataGridView dgv_orders;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn parts_type;
         private System.Windows.Forms.DataGridViewTextBoxColumn car;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.Button bt_order;
-        private System.Windows.Forms.Button bt_refresh;
-        private System.Windows.Forms.Button bt_orders;
     }
 }

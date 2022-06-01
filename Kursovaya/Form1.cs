@@ -12,12 +12,14 @@ using Microsoft.Data.SqlClient;
 
 namespace Kursovaya
 {
-    
     public partial class Form1 : Form
     {
         public SqlConnection sqlConnection;
         public SqlCommand command;
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Clair\source\repos\Kursovaya\Kursovaya\Database1.mdf;Integrated Security=True";
+
+        public string connectionString =
+            @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Clair\source\repos\Kursovaya\Kursovaya\Database1.mdf;Integrated Security=True";
+
         public Form1()
         {
             InitializeComponent();
@@ -33,10 +35,10 @@ namespace Kursovaya
             try
             {
                 sqlReader = await command.ExecuteReaderAsync();
-                
+
                 while (await sqlReader.ReadAsync())
                 {
-                    dataGridView1.Rows.Add(Convert.ToString(sqlReader["name"]));
+                    dataGridView1.Rows.Add(Convert.ToString(sqlReader["Id"]), Convert.ToString(sqlReader["name"]));
                 }
             }
             catch (Exception ex)
@@ -50,7 +52,6 @@ namespace Kursovaya
                 {
                     sqlReader.Close();
                 }
-
             }
         }
 
@@ -81,8 +82,24 @@ namespace Kursovaya
 
         private void bt_choose_Click(object sender, EventArgs e)
         {
-            string name = dataGridView1.SelectedCells[0].Value.ToString();
-            Form3 newform = new Form3(name);
+            int id = 0;
+            if (dataGridView1.SelectedCells.Count == 1)
+            {
+                string name = dataGridView1.SelectedCells[0].Value.ToString();
+                id = Convert.ToInt32(dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value);
+            }
+            else if (dataGridView1.SelectedCells.Count == 2)
+            {
+                id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+            }
+            else
+            {
+                MessageBox.Show("Выберите пользователя!", "Вы не выбрали пользователя", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+
+            Form3 newform = new Form3(id);
             newform.Show();
             newform.Focus();
         }
