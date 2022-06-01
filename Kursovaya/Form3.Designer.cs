@@ -36,7 +36,6 @@ namespace Kursovaya
             this.car = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.bt_order = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_parts)).BeginInit();
             this.SuspendLayout();
@@ -93,15 +92,6 @@ namespace Kursovaya
             this.price.Name = "price";
             this.price.ReadOnly = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // bt_order
             // 
             this.bt_order.Location = new System.Drawing.Point(12, 369);
@@ -117,7 +107,6 @@ namespace Kursovaya
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bt_order);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgv_parts);
             this.Name = "Form3";
             this.Text = "Form3";
@@ -136,7 +125,6 @@ namespace Kursovaya
         private System.Windows.Forms.DataGridViewTextBoxColumn car;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bt_order;
     }
 }
